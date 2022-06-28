@@ -60,18 +60,18 @@ int main(void)
 
     if (flag == 0)
     {
-            int big = scores[0];
-    int pos = 1;
+        int big = scores[0];
+        int pos = 1;
 
-    for (int l = 1; l < num_players; l++)
-    {
-        if (big < scores[l])
+        for (int l = 1; l < num_players; l++)
         {
-            big = scores[l];
-            pos = l + 1;
+            if (big < scores[l])
+            {
+                big = scores[l];
+                pos = l + 1;
+            }
         }
-    }
-    printf("The winner is: Player %i\n", pos);
+        printf("The winner is: Player %i\n", pos);
     }
 
 }
